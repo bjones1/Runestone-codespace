@@ -53,4 +53,11 @@
     successfully!</p>
 <p><strong>Update 4:&nbsp;</strong>I have added more software development tools
     to the dockerfile such as LaTeX, sage, and pdf tools.&nbsp;</p>
-<p>&nbsp;</p>
+<p><strong>Update 5:&nbsp;</strong>There was an issue where the codespace would
+    essentially get stuck building due to it waiting on input from the user
+    which must be avoided. Researching a fix now.</p>
+<p><strong>Update 6:&nbsp;</strong>After researching this issue, we found the
+    solution. We added the line: 'ENV DEBIAN_FRONTEND=noninteractive' This
+    makes the dockerfile noninteractive, so it sets all inputs needed to their
+    default value. The codespace now fully builds and operates with all
+    software needed.&nbsp;</p>
