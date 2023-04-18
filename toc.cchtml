@@ -1,6 +1,7 @@
 <h1>Runestone Codespace</h1>
 <h2>Codespace creation</h2>
 <ol>
+	<li><a href="readme.cchtml">Sprint 2 Pre-Writing README.cchtml</a></li>
     <li><a href="README.md">Readme</a></li>
     <li><a href="ideas.cchtml">Ideas</a></li>
     <li><a href=".devcontainer/devcontainer.json">devcontainer.json</a></li>
