@@ -1,0 +1,142 @@
+<h1><span style="color: rgb(230, 126, 35);">Runestone interactive - author
+        toolkit </span></h1>
+<h3><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt; color: rgb(132, 63, 161);">Describe
+        the feature you will add.</span></h3>
+<p><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt;"><span
+            style="color: rgb(0, 0, 0);">According to the Teams general post
+            page, the Runestone interactive &ndash; author toolkit will need
+            some features added to help make it easier for the authors of
+            textbooks to maintain and make edits to their work. To begin, we
+            will need to have the title of a few books to integrate into the
+            dev container that is prebuilt for each authoring environment.
+            These books will need to be prebuilt as well. And as a stretch
+            goal, we will be looking for ways to easily make edits to the work
+            by some type of &ldquo;edit&rdquo; or &ldquo;modify&rdquo;
+            button.</span></span></p>
+<h3><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt;"><span
+            style="color: rgb(0, 0, 0);"><span
+                style="color: rgb(132, 63, 161);">Defines which
+                repository/repositories your code will be added to.</span>
+        </span></span></h3>
+<p><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt;"><span
+            style="color: rgb(0, 0, 0);">The Runestone-codespace repository is
+            forked from <span style="color: rgb(52, 73, 94);"><a
+                    style="color: rgb(52, 73, 94);"
+                    href="https://github.com/bjones1/Runestone-codespace">https://github.com/bjones1/Runestone-codespace</a>
+            </span>into both partners personal github account and then is
+            cloned to a working copy on each remote machine. Smart Git is being
+            utilized as the versioning and repository control software. The
+            current plan is to take each party&rsquo;s work and commit to the
+            forked branch and then independently make pull requests against
+            that repo to the bjones1 repo upstream. </span></span></p>
+<h3>&nbsp;</h3>
+<h3><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt; color: rgb(132, 63, 161);">Specify
+        what libraries, languages, and interfaces your code must work
+        with.&nbsp;</span></h3>
+<p><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt;"><span
+            style="color: rgb(0, 0, 0);">Multiple languages and libraries are
+            going to be required, starting with the docker-tools python3
+            framework. Google Codespaces and dev containers will need to be
+            understood to preconfigure environments that can be easily accessed
+            by the VS Code IDE. Basic Linux command line interfaces and tools
+            will be required as it is the operating system upon which the
+            framework is built. Bash scripting, and HTML/JSON will also be
+            required to work with the user interfaces. The Pretext language is
+            a LaTex like language that is used for the authoring of books and
+            will have to be reviewed and made familiar. To interface with the
+            CLI for pretext, it may also be necessary to have a little TCL
+            scripting ability. </span></span></p>
+<p>&nbsp;</p>
+<h3><span
+        style="color: rgb(132, 63, 161); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Detail
+        a series of steps you will follow to complete this
+        feature.&nbsp;</span></h3>
+<ol>
+    <li><span
+            style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Fork
+            and Clone repository and set up Smartgit environment. </span></li>
+    <li>
+        <p><span
+                style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Read
+                and review the structure and ideas files created by the
+                previous team. The primary objective is to set up any
+                development tools and environments that are required to boot
+                the docker tools.&nbsp;</span></p>
+    </li>
+    <li
+        style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">
+        <span
+            style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Build
+            a container to house the publication and learn how to modify and
+            make changes to the source code provided.&nbsp;</span></li>
+    <li
+        style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">
+        <span
+            style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Use
+            the tool to create and author some small textbook work, to
+            understand the workflow needed by the customer.&nbsp;</span></li>
+    <li
+        style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">
+        <span
+            style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Meet
+            and discuss a flagship book to use for this development effort with
+            instructor.&nbsp;</span></li>
+    <li
+        style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">
+        <span
+            style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Develop
+            a list of features that directly enhance the authoring experience
+            and/or increase productivity and then quote the time and effort
+            required for implementation. Our SCRUMs will be used to monitor
+            progress.</span></li>
+    <li
+        style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">
+        Distribute the feasible work packages between the partners/developers
+        and then do the coding work, while maintaining the Git repository. 8.
+        Frequently gage progress and challenges to schedule and delivered
+        product and adjust as needed.&nbsp;</li>
+</ol>
+<p>&nbsp;</p>
+<h3><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt; color: rgb(132, 63, 161);">Define
+        tests to show the feature works correctly.</span></h3>
+<p><span
+        style="font-family: 'book antiqua', palatino, serif; font-size: 14pt;"><span
+            style="color: rgb(0, 0, 0);">A unit test will be built alongside
+            the development effort for each widget, button, or software feature
+            added; and from the developers understanding of what the feature is
+            supposed to do, we will create various what-if scenarios to
+            validate the acceptable data inputs and the correct processing of
+            valid data, but also guarding against input which violates the
+            intent and logic functions performed by the code. It may even be
+            necessary for one developer to write the test, while the other
+            developer writes the code, so that timeline and schedule is not
+            compromised. The Test-Driven-Development (TDD) mentality will be
+            used to perform the project tasks.&nbsp;</span></span></p>
+<h3><span
+        style="color: rgb(132, 63, 161); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">Outline
+        goals for the draft pull request and final pull request.&nbsp;</span>
+</h3>
+<p><span
+        style="color: rgb(0, 0, 0); font-size: 14pt; font-family: 'book antiqua', palatino, serif;">For
+        the initial draft pull request, the expectation is to have at least the
+        environment ready for experimentation with at least one published book
+        to be able to make rapid edits and changes to republish. The goal of
+        the final pull request will be to incorporate instructor feedback and
+        perform any feature cleanup. In addition to the delivery of a
+        publishable, editable book for authors to use in a dev-container, it
+        would also be good to have a suite of corresponding tests that can be
+        run to ensure that the code is functioning as expected. The goal of our
+        Sprint is to ensure that whatever is finally included in the last pull
+        request is usable and deliverable. We will use our SCRUM meetings to
+        make any decisions to strike features that are at risk of not being
+        completed in time. Documentation of the Sprint Backlog will be
+        maintained for any future teams to use in follow-up development
+        efforts.</span></p>
+<p>&nbsp;</p>
