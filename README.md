@@ -18,12 +18,6 @@ This take a minute or two (just the first time; later this will be much faster) 
 
 Next time you want to work on your book, return to your newly created repository, go to the green `<> Code` button, and select the codespace you previously created. If you don't see that codespace (perhaps you deleted it to save space), you can always create a new codespace.
 
-## Manual steps after start
-
-After the container has fully started, switch to the Ports tab, then right-click on the visibility of ports 27377 and 27378 and set them as public. Unfortunately, there's no way to do this automatically yet.
-
-![Changing port visibility to public](make-port-public.png)
-
 ## Credits
 
 This file was mostly copied from the [PreTeXt Codespace](https://github.com/PreTeXtBook/pretext-codespace/blob/main/README.md)
