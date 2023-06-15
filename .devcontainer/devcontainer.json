@@ -30,12 +30,12 @@
         "27378": {
             "label": "CodeChat Client<->Server websocket",
             "requireLocalPort": true
+            // This port needs to be public; however, there's no way to specify port visibility here. See `server.py` in the CodeChat Server for details.
         }
     },
     // <p>Use <code>postCreateCommand</code> to run commands after the container
     //     is created. See the <a href="https://containers.dev/implementors/json_reference/#lifecycle-scripts">docs</a>.</p>
     "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
-    "postStartCommand": "./.devcontainer/postStartCommand.sh",
 
     // <p>Use a Dockerfile to build a container, so that users see very quick startup times.<p>
     "build": {
