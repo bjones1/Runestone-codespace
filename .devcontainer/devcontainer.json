@@ -29,19 +29,13 @@
         },
         "27378": {
             "label": "CodeChat Client<->Server websocket",
-            "requireLocalPort": true,
-            // <p>Per <a
-            //         href="https://github.com/community/community/discussions/10394">this
-            //         issue</a>, setting port visibility isn't supported yet.
-            //     Per the [docs](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace#sharing-a-port), a private port requires an access token that's VSCode automatically sends over (I assume) HTTP/HTTPS. In contrast, a public port doesn't require the token, so I'm guessing  this works with non-HTTP protocols such as websockets. When this is private, the websocket never connects. So, the ``postStartCommand`` below configures this.</p>
-            "visibility": "public"
+            "requireLocalPort": true
         }
     },
     // <p>Use <code>postCreateCommand</code> to run commands after the container
     //     is created. See the <a href="https://containers.dev/implementors/json_reference/#lifecycle-scripts">docs</a>.</p>
     "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
-    // Per the [docs](https://cli.github.com/manual/gh_codespace_ports_visibility), this is another way to make a port's visibility public.
-    "postStartCommand": "gh codespace ports visibility 27378:public -c $CODESPACE_NAME",
+    "postStartCommand": "./.devcontainer/postStartCommand.sh",
 
     // <p>Use a Dockerfile to build a container, so that users see very quick startup times.<p>
     "build": {
