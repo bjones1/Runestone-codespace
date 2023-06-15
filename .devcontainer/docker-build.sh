@@ -5,7 +5,7 @@ set DEBIAN_FRONTEND=noninteractive
 
 # Install textbook authoring support software: LaTeX, sage, and other pdf tools.
 apt update
-apt install -y --no-install-recommends python3-pip texlive texlive-latex-extra texlive-fonts-extra texlive-xetex texlive-science texlive-music sagemath ghostscript pdf2svg
+#apt install -y --no-install-recommends python3-pip texlive texlive-latex-extra texlive-fonts-extra texlive-xetex texlive-science texlive-music sagemath ghostscript pdf2svg
 
 # Upgrade pip and install required Python tools.
 python3 -m pip install --upgrade pip
