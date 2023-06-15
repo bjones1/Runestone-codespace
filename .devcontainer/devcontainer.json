@@ -6,8 +6,6 @@
 //         codespace</a>.</p>
 {
     "name": "Runestone editor",
-    // <p>For now, the bookserver requires an old version of asyncpg that
-    //     doesn't build on Python 3.11, so stick with 3.10.</p>
     "forwardPorts": [
         // <p>The port used for a Thrift connection between the VSCode CodeChat
         //     extension and the CodeChat Server.</p>
@@ -19,6 +17,7 @@
         //     Server and the CodeChat Client.</p>
         27378
     ],
+    // See the [docs](https://containers.dev/implementors/json_reference/#port-attributes).
     "portsAttributes": {
         "27376": {
             "label": "VSCode extension <-> CodeChat Server",
@@ -26,28 +25,23 @@
         },
         "27377": {
             "label": "CodeChat Client",
-            "requireLocalPort": true,
-            "protocol": "https",
-            // <p>Per <a
-            //         href="https://github.com/community/community/discussions/10394">this
-            //         issue</a>, setting port visibility isn't supported yet.
-            //     Since the CodeChat Client runs in the local browser, this is
-            //     required so it can request pages from the CodeChat Server
-            //     running in the codespaces container.</p>
-            "visibility": "public"
+            "requireLocalPort": true
         },
         "27378": {
             "label": "CodeChat Client<->Server websocket",
             "requireLocalPort": true,
-            // <p>Likewise, not yet supported. It's used by the CodeChat Client
-            //     in the local browser to communicate with the CodeChat Server
-            //     in the codespaces container using a websocket.</p>
+            // <p>Per <a
+            //         href="https://github.com/community/community/discussions/10394">this
+            //         issue</a>, setting port visibility isn't supported yet.
+            //     Per the [docs](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace#sharing-a-port), a private port requires an access token that's VSCode automatically sends over (I assume) HTTP/HTTPS. In contrast, a public port doesn't require the token, so I'm guessing  this works with non-HTTP protocols such as websockets. When this is private, the websocket never connects. So, the ``postStartCommand`` below configures this.</p>
             "visibility": "public"
         }
     },
     // <p>Use <code>postCreateCommand</code> to run commands after the container
     //     is created. See the <a href="https://containers.dev/implementors/json_reference/#lifecycle-scripts">docs</a>.</p>
     "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+    // Per the [docs](https://cli.github.com/manual/gh_codespace_ports_visibility), this is another way to make a port's visibility public.
+    "postStartCommand": "gh codespace ports visibility 27378:public -c $CODESPACE_NAME",
 
     // <p>Use a Dockerfile to build a container, so that users see very quick startup times.<p>
     "build": {
@@ -71,13 +65,10 @@
                 "editor.snippetSuggestions": "top",
                 "xml.validation.enabled": false,
                 // Enable word wrapping.
-                "editor.wordWrap": "on",
-                // Use the custom CodeChat Server start command to deal with port weirdness in a CodeSpace.
-                "CodeChat.CodeChatServer.Command": "/workspaces/Runestone-codespace/.devcontainer/CodeChat_Server.sh"
+                "editor.wordWrap": "on"
             },
             "extensions": [
                 "CodeChat.codechat",
-                "mshr-h.VerilogHDL",
                 "ms-vscode.live-server",
                 "oscarlevin.pretext-tools"
             ]
